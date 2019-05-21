@@ -1,0 +1,12 @@
+C:\Users\AVERAPC\source\repos\prueba\Busisnes\bin\Debug\netcoreapp2.2\Busisnes.deps.json
+C:\Users\AVERAPC\source\repos\prueba\Busisnes\bin\Debug\netcoreapp2.2\Busisnes.dll
+C:\Users\AVERAPC\source\repos\prueba\Busisnes\bin\Debug\netcoreapp2.2\Busisnes.pdb
+C:\Users\AVERAPC\source\repos\prueba\Busisnes\obj\Debug\netcoreapp2.2\Busisnes.csproj.CoreCompileInputs.cache
+C:\Users\AVERAPC\source\repos\prueba\Busisnes\obj\Debug\netcoreapp2.2\Busisnes.AssemblyInfoInputs.cache
+C:\Users\AVERAPC\source\repos\prueba\Busisnes\obj\Debug\netcoreapp2.2\Busisnes.AssemblyInfo.cs
+C:\Users\AVERAPC\source\repos\prueba\Busisnes\obj\Debug\netcoreapp2.2\Busisnes.dll
+C:\Users\AVERAPC\source\repos\prueba\Busisnes\obj\Debug\netcoreapp2.2\Busisnes.pdb
+C:\Users\AVERAPC\source\repos\prueba\Busisnes\bin\Debug\netcoreapp2.2\Data.dll
+C:\Users\AVERAPC\source\repos\prueba\Busisnes\bin\Debug\netcoreapp2.2\Data.pdb
+C:\Users\AVERAPC\source\repos\prueba\Busisnes\obj\Debug\netcoreapp2.2\Busisnes.csprojAssemblyReference.cache
+C:\Users\AVERAPC\source\repos\prueba\Busisnes\obj\Debug\netcoreapp2.2\Busisnes.csproj.CopyComplete

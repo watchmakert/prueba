@@ -1,0 +1,9 @@
+C:\Users\AVERAPC\source\repos\prueba\Data\obj\Debug\netcoreapp2.2\Data.csproj.CoreCompileInputs.cache
+C:\Users\AVERAPC\source\repos\prueba\Data\obj\Debug\netcoreapp2.2\Data.AssemblyInfoInputs.cache
+C:\Users\AVERAPC\source\repos\prueba\Data\obj\Debug\netcoreapp2.2\Data.AssemblyInfo.cs
+C:\Users\AVERAPC\source\repos\prueba\Data\bin\Debug\netcoreapp2.2\Data.deps.json
+C:\Users\AVERAPC\source\repos\prueba\Data\bin\Debug\netcoreapp2.2\Data.dll
+C:\Users\AVERAPC\source\repos\prueba\Data\bin\Debug\netcoreapp2.2\Data.pdb
+C:\Users\AVERAPC\source\repos\prueba\Data\obj\Debug\netcoreapp2.2\Data.csprojAssemblyReference.cache
+C:\Users\AVERAPC\source\repos\prueba\Data\obj\Debug\netcoreapp2.2\Data.dll
+C:\Users\AVERAPC\source\repos\prueba\Data\obj\Debug\netcoreapp2.2\Data.pdb
