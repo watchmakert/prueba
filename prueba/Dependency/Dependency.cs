@@ -4,6 +4,8 @@ using Busisnes.AeronavesBusisness.Class;
 using Busisnes.AeronavesBusisness.Interfaces;
 using Busisnes.Paises.Class;
 using Busisnes.Paises.Interfaces;
+using Busisnes.PrestamosBusisness.Class;
+using Busisnes.PrestamosBusisness.Interfaces;
 using Busisnes.RutasBusisness.Class;
 using Busisnes.RutasBusisness.Interfaces;
 using Microsoft.Extensions.Configuration;
@@ -26,12 +28,8 @@ namespace prueba.Dependency
             services.AddScoped<IRutaServices, RutasServices>();
             services.AddScoped<IAerolineasServices, AerolineasServices>();
             services.AddScoped<IPaisesServices, PaisesServices>();
+            services.AddScoped<IPrestamosServices, PrestamosServices>();
 
-        }
-
-        internal void RegisterServices(IServiceCollection services, IConfiguration configuration)
-        {
-            throw new NotImplementedException();
         }
     }
 }

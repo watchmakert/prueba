@@ -102,7 +102,7 @@ namespace Busisnes.Paises.Class
             catch (Exception Ex)
             {
                 string Message = Ex.Message;
-                throw;
+                throw new Exception();
             }
         }
 

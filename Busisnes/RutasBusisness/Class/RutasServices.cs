@@ -32,14 +32,14 @@ namespace Busisnes.RutasBusisness.Class
         {
             try
             {
-                if (SiExisteAeronave(idAeronave) && SiExistePais(idOrigen) && SiExistePais(idOrigen))
+                if (SiExisteAeronave(idAeronave) && SiExistePais(idOrigen) && SiExistePais(idDestino))
                 {
                     using (aplication2Context ctx = new aplication2Context())
                     {
                         if(ctx.Ruta.Where(x => x.IdAeronave == idAeronave).Any())
                         {
-                            List<Ruta> rutas1 = (from p in ctx.Ruta where p.Fechainicio <= inicio && p.Fechafin >= inicio select p).ToList();
-                            List<Ruta> rutas2 = (from p in ctx.Ruta where p.Fechainicio <= final && p.Fechafin >= final select p).ToList();
+                            List<Ruta> rutas1 = (from p in ctx.Ruta where p.IdAeronave == idAeronave && p.Fechainicio <= inicio && p.Fechafin >= inicio select p).ToList();
+                            List<Ruta> rutas2 = (from p in ctx.Ruta where p.IdAeronave == idAeronave && p.Fechainicio <= final && p.Fechafin >= final select p).ToList();
                             if(rutas1.Count()>0 || rutas2.Count() > 0)
                             {
                                 //error
