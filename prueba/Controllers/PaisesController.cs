@@ -28,7 +28,7 @@ namespace prueba.Controllers
         }
 
         // GET: api/Paises/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}")]
         public ActionResult<Pais> Get(int id)
         {
             Pais pais = _IPaisesServices.ConsultarPais(id);

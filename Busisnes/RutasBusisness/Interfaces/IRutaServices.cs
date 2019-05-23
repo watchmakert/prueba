@@ -11,5 +11,7 @@ namespace Busisnes.RutasBusisness.Interfaces
         void AgregarRutas(DateTime inicio, DateTime final, int idAeronave, int idOrigen, int idDestino);
         void BorrarRuta(int identificacion);
         Ruta ConsultarRuta(int identificacion);
+
+        List<Ruta> GetRutasActuales();
     }
 }

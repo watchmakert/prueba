@@ -11,5 +11,6 @@ namespace Busisnes.PrestamosBusisness.Interfaces
         Prestamo ConsultarPrestamo(int identificacion);
         void AgregarPrestamo(DateTime inicio, DateTime final, int idPopietario, int idPrestador, int idAeronave);
         void BorrarPrestamo(int identificacion);
+        List<Prestamo> GetPrestamosActuales();
     }
 }

@@ -27,7 +27,7 @@ namespace prueba.Controllers
             return lstAeronaves;
         }
 
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}")]
         public ActionResult<Aeronave> Get(int id)
         {
             Aeronave aeronave = _IAeronavesServices.ConsultarAeronave(id);

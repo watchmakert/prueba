@@ -18,6 +18,13 @@ namespace Busisnes.AeronavesBusisness.Class
                 using (aplication2Context ctx = new aplication2Context())
                 {
                     lstAeronave = ctx.Aeronave.ToList();
+                    foreach (Aeronave element in lstAeronave)
+                    {
+                        element.Estado = SetEstado(element.Id);
+                        ctx.Entry(element).State = EntityState.Modified;
+                        ctx.SaveChanges();
+                    }
+                    lstAeronave = ctx.Aeronave.ToList();
                 }
 
                 return lstAeronave;
@@ -85,6 +92,9 @@ namespace Busisnes.AeronavesBusisness.Class
                     Aeronave aeronave = new Aeronave();
                     using (aplication2Context ctx = new aplication2Context())
                     {
+                        aeronave.Estado = SetEstado(identificacion);
+                        ctx.Entry(aeronave).State = EntityState.Modified;
+                        ctx.SaveChanges();
                         aeronave = ctx.Aeronave.Where(x => x.Id == identificacion).FirstOrDefault();
                         ctx.SaveChanges();
                     }
@@ -111,13 +121,27 @@ namespace Busisnes.AeronavesBusisness.Class
             {
                 aeronave.Latitud = latitud;
                 aeronave.Longitud = longitud;
-                aeronave.Estado = estado;
+                aeronave.Estado = SetEstado(identificacion);
                 ctx.Entry(aeronave).State = EntityState.Modified;
                 ctx.SaveChanges();
 
-            }
-                
+            } 
+        }
 
+        public bool SetEstado(int identificacion)
+        {
+            DateTime Hoy = DateTime.Today;
+            using (aplication2Context ctx = new aplication2Context())
+            {
+                if (ctx.Ruta.Where(x => x.IdAeronave == identificacion && x.Fechainicio >= Hoy && x.Fechainicio <= Hoy).Any())
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
         }
 
         private bool SiExisteAerolinea(int identificacion)

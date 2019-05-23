@@ -19,14 +19,15 @@ namespace prueba.Controllers
         {
             this._IRutasServices = _IRutasServices;
         }
-        
+        // GET: api/Rutas
         [HttpGet]
         public ActionResult<List<Ruta>> Get()
         {
             List<Ruta> rutas = _IRutasServices.GetRutas();
             return rutas;
         }
-        [HttpGet("{id}", Name = "Get")]
+        // GET: api/Rutas/5
+        [HttpGet("{id}")]
         public ActionResult<Ruta> Get(int id)
         {
             Ruta ruta = _IRutasServices.ConsultarRuta(id);

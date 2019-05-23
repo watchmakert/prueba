@@ -23,10 +23,10 @@ namespace prueba.Controllers
         [HttpGet]
         public ActionResult<List<Prestamo>> Get()
         {
-            List<Prestamo> prestamo = _IPrestamosServices.GetPrestamos();
+            List<Prestamo> prestamo = _IPrestamosServices.GetPrestamosActuales();
             return prestamo;
         }
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}")]
         public ActionResult<Prestamo> Get(int id)
         {
             Prestamo prestamo = _IPrestamosServices.ConsultarPrestamo(id);
@@ -36,7 +36,7 @@ namespace prueba.Controllers
         [HttpPost]
         public void Post([FromBody] Prestamo prestamo)
         {
-            _IPrestamosServices.AgregarPrestamo(prestamo.Fechainicio, prestamo.Fechafin,prestamo.IdPropietario, prestamo.IdPrestador, prestamo.Idaeronave);
+            _IPrestamosServices.AgregarPrestamo(prestamo.Fechainicio, prestamo.Fechafin, prestamo.IdPropietario, prestamo.IdPrestador, prestamo.Idaeronave);
         }
 
         [HttpDelete("{id}")]

@@ -12,6 +12,7 @@ namespace Busisnes.AeronavesBusisness.Interfaces
         Aeronave ConsultarAeronave(int identificacion);
         void BorrarAeronave(int identificacion);
         void ActualizarAeronave(int identificacion, decimal latitud, decimal longitud, bool estado);
+        bool SetEstado(int identificacion);
 
 
     }

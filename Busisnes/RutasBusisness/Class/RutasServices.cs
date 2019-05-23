@@ -28,6 +28,26 @@ namespace Busisnes.RutasBusisness.Class
             }
         }
 
+        public List<Ruta> GetRutasActuales()
+        {
+            try
+            {
+                DateTime Hoy = DateTime.Today;
+                List<Ruta> lstRutas;
+                using (aplication2Context ctx = new aplication2Context())
+                {
+                    lstRutas = ctx.Ruta.Where(x => x.Fechainicio >= Hoy && x.Fechafin <= Hoy).ToList();
+                }
+
+                return lstRutas;
+            }
+            catch (Exception Ex)
+            {
+                string Message = Ex.Message;
+                throw;
+            }
+        }
+
         public void AgregarRutas(DateTime inicio, DateTime final, int idAeronave, int idOrigen, int idDestino)
         {
             try

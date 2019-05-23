@@ -86,8 +86,8 @@ namespace Busisnes.PrestamosBusisness.Class
                     {
                         if (ctx.Prestamo.Where(x => x.Idaeronave == idAeronave).Any())
                         {
-                            List<Prestamo> prestamo1 = (from p in ctx.Prestamo where p.Idaeronave == idAeronave && p.Fechainicio <= inicio && p.Fechafin >= inicio select p).ToList();
-                            List<Prestamo> prestamo2 = (from p in ctx.Prestamo where p.Idaeronave == idAeronave && p.Fechainicio <= final && p.Fechafin >= final select p).ToList();
+                            List<Prestamo> prestamo1 = (from p in ctx.Prestamo where p.Idaeronave == idAeronave && IsNotBetween(inicio, p.Fechainicio, p.Fechafin) select p).ToList();
+                            List<Prestamo> prestamo2 = (from p in ctx.Prestamo where p.Idaeronave == idAeronave && IsNotBetween(final, p.Fechainicio, p.Fechafin)  select p).ToList();
                             if (prestamo1.Count() > 0 || prestamo2.Count() > 0)
                             {
                                 //error
@@ -185,6 +185,22 @@ namespace Busisnes.PrestamosBusisness.Class
                 else return false;
             }
 
+        }
+
+        private bool IsNotBetween(DateTime t1, DateTime t2, DateTime t3)
+        {
+            int result1 = DateTime.Compare(t1, t2);
+            int result2 = DateTime.Compare(t1, t3);
+
+            if ((result1 > 0 && result2 > 0) || (result1 < 0 && result2 < 0))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
         }
     }
 }
